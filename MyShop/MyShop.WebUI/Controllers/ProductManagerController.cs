@@ -49,7 +49,7 @@ namespace MyShop.WebUI.Controllers
 
         public ActionResult Edit(string Id)
         {
-            Product product = context.find(Id);
+            Product product = context.Find(Id);
             if (product == null)
             {
                 return HttpNotFound();
@@ -63,7 +63,7 @@ namespace MyShop.WebUI.Controllers
         [HttpPost]
         public ActionResult Edit(Product product, string Id)
         {
-            Product productToEdit = context.find(Id);
+            Product productToEdit = context.Find(Id);
             if (productToEdit == null)
             {
                 return HttpNotFound();
@@ -89,7 +89,7 @@ namespace MyShop.WebUI.Controllers
 
         public ActionResult Delete(string Id)
         {
-            Product productToDelete = context.find(Id);
+            Product productToDelete = context.Find(Id);
             if (productToDelete == null)
             {
                 return HttpNotFound();
@@ -104,7 +104,7 @@ namespace MyShop.WebUI.Controllers
         [ActionName("Delete")]
         public ActionResult ConfirmDelete(string Id)
         {
-            Product productToDelete = context.find(Id);
+            Product productToDelete = context.Find(Id);
             if (productToDelete == null)
             {
                 return HttpNotFound();
